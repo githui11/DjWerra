@@ -3,163 +3,42 @@ import React from "react";
 import Link from "next/link";
 import { MoveLeft } from "lucide-react";
 
-// Final comprehensive list matching channel parity
+// Strictly verified list - Mixes with downloaded, validated thumbnails ONLY
 const mixes = [
-    // --- 2026/2025 Latest Hits ---
     {
         id: 1,
         title: "TOP SWAHILI GOSPEL MIX 2026",
-        thumbnail: "https://img.youtube.com/vi/8JNcxlNjV2E/maxresdefault.jpg",
+        thumbnail: "/assets/thumbnails/8JNcxlNjV2E.jpg",
         youtubeLink: "https://www.youtube.com/watch?v=8JNcxlNjV2E",
         description: "Ft Joel Lwaga, Guardian Angel, Wapendwa Muziki"
     },
     {
         id: 2,
         title: "LATEST GOSPEL MIX | KIMYA EDITION",
-        thumbnail: "https://img.youtube.com/vi/o7VtTIpf218/maxresdefault.jpg",
+        thumbnail: "/assets/thumbnails/o7VtTIpf218.jpg",
         youtubeLink: "https://www.youtube.com/watch?v=o7VtTIpf218",
         description: "Ft Guardian Angel, Rose Muhando, Obby Alpha"
     },
     {
         id: 3,
         title: "BEST SWAHILI GOSPEL MIX 2026 | Live Praise",
-        thumbnail: "https://img.youtube.com/vi/wVfaWSukNlg/maxresdefault.jpg",
+        thumbnail: "/assets/thumbnails/wVfaWSukNlg.jpg",
         youtubeLink: "https://www.youtube.com/watch?v=wVfaWSukNlg",
         description: "Ft Dr. Ipyana, Sarah K, Zoravo, Israel Mbonyi"
     },
-
-    // --- Praise Atmosphere Series ---
     {
         id: 4,
-        title: "Praise Atmosphere S1 E1",
-        thumbnail: "https://img.youtube.com/vi/uekQikG1XDQ/hqdefault.jpg",
-        youtubeLink: "https://www.youtube.com/watch?v=uekQikG1XDQ",
-        description: "Best Swahili Gospel Mix - Ft Msanii Group"
-    },
-    {
-        id: 5,
-        title: "Praise Atmosphere S1 E2",
-        thumbnail: "https://img.youtube.com/vi/onBdMwFHFLq/hqdefault.jpg",
-        youtubeLink: "https://www.youtube.com/watch?v=onBdMwFHFLq",
-        description: "Amefanya Mungu - Ft Wapendwa Muziki"
-    },
-    {
-        id: 6,
-        title: "BEST SWAHILI GOSPEL MIX 2025 | Ep 3",
-        thumbnail: "https://img.youtube.com/vi/09LXdeNP7Ek/hqdefault.jpg",
-        youtubeLink: "https://www.youtube.com/watch?v=09LXdeNP7Ek",
-        description: "Ft Sifaeli Mwabuka, Rose Muhando"
-    },
-
-    // --- Live Sets & Sessions ---
-    {
-        id: 7,
-        title: "BEST OF LIVE SWAHILI PRAISE | SET 1",
-        thumbnail: "https://img.youtube.com/vi/GxBo6ShMVZf/hqdefault.jpg",
-        youtubeLink: "https://www.youtube.com/watch?v=GxBo6ShMVZf",
-        description: "Ft Israel Mbonyi, Dr. Ipyana"
-    },
-    {
-        id: 8,
-        title: "BEST OF LIVE SWAHILI PRAISE | SET 2",
-        thumbnail: "https://img.youtube.com/vi/OQvHMq_WwRO/hqdefault.jpg",
-        youtubeLink: "https://www.youtube.com/watch?v=OQvHMq_WwRO",
-        description: "Live Worship Session - Verified ID"
-    },
-    {
-        id: 9,
-        title: "7HM Sessions Ep 5 – LATEST GOSPEL MIX",
-        thumbnail: "https://img.youtube.com/vi/g_2B6-qZl7E/hqdefault.jpg",
-        youtubeLink: "https://www.youtube.com/watch?v=g_2B6-qZl7E",
-        description: "Live in Nairobi CBD - Ft Nairobi Street Vibes"
-    },
-
-    // --- Special Editions ---
-    {
-        id: 10,
-        title: "SWAHILI WORSHIP GOSPEL MIX | SHUSHA NYAVU",
-        thumbnail: "https://img.youtube.com/vi/ohOaG8mxOAc/hqdefault.jpg",
-        youtubeLink: "https://www.youtube.com/watch?v=ohOaG8mxOAc",
-        description: "Ft Christina Shusho, Obby Alpha, Guardian Angel"
-    },
-    {
-        id: 11,
         title: "BEST GOSPEL REGGAE WORSHIP | Vol. 2",
-        thumbnail: "https://img.youtube.com/vi/DF5BvTmhMYQ/hqdefault.jpg",
+        thumbnail: "/assets/thumbnails/DF5BvTmhMYQ.jpg",
         youtubeLink: "https://www.youtube.com/watch?v=DF5BvTmhMYQ",
         description: "Ft Edith Wairimu, Shasha Marley"
     },
     {
-        id: 12,
+        id: 5,
         title: "Throwback Edition | Best Swahili Praise",
-        thumbnail: "https://img.youtube.com/vi/ev7U4Ycvj2w/hqdefault.jpg",
+        thumbnail: "/assets/thumbnails/ev7U4Ycvj2w.jpg",
         youtubeLink: "https://www.youtube.com/watch?v=ev7U4Ycvj2w",
         description: "Ft Solomon Mkubwa, Eunice Njeri"
-    },
-    {
-        id: 13,
-        title: "BEST OF EAST AFRICA GOSPEL | VOL 3",
-        thumbnail: "https://img.youtube.com/vi/kF6_zED-x8P/hqdefault.jpg",
-        youtubeLink: "https://www.youtube.com/watch?v=kF6_zED-x8P",
-        description: "Ft Wapendwa Muziki, Guardian Angel"
-    },
-
-    // --- Archive / Older Mixes (Filling to 20+) ---
-    {
-        id: 14,
-        title: "Kugangua Agano | Special Worship",
-        thumbnail: "https://img.youtube.com/vi/M2YGJ_gGiUR/hqdefault.jpg", // Extracted old ID pattern
-        youtubeLink: "https://www.youtube.com/results?search_query=DJ+Werra+Kugangua+Agano",
-        description: "Powerful Deliverance Prayers"
-    },
-    {
-        id: 15,
-        title: "Praise & Worship 2024 | Vol 1",
-        thumbnail: "https://img.youtube.com/vi/PhyIXdaFZMG/hqdefault.jpg",
-        youtubeLink: "https://www.youtube.com/results?search_query=DJ+Werra+Praise+2024",
-        description: "Best of 2024 Gospel Hits"
-    },
-    {
-        id: 16,
-        title: "Reggae Worship | Vol 1",
-        thumbnail: "https://img.youtube.com/vi/GAOyJXGAXoY/hqdefault.jpg", // Reusing valid ID as close match if exact vol 1 is missing
-        youtubeLink: "https://www.youtube.com/results?search_query=DJ+Werra+Reggae+Vol+1",
-        description: "Classic Gospel Reggae Vibes"
-    },
-    {
-        id: 17,
-        title: "Swahili Worship | Vol 4",
-        thumbnail: "https://img.youtube.com/vi/FeuePEG0iAc/hqdefault.jpg",
-        youtubeLink: "https://www.youtube.com/results?search_query=DJ+Werra+Swahili+Worship+Vol+4",
-        description: "Deep Worship Session"
-    },
-    {
-        id: 18,
-        title: "Nairobi Street Vibes | Ep 1",
-        thumbnail: "https://img.youtube.com/vi/CkhkKACnouka/hqdefault.jpg",
-        youtubeLink: "https://www.youtube.com/results?search_query=DJ+Werra+Nairobi+Street+Vibes",
-        description: "The Beginning of Street Gospel"
-    },
-    {
-        id: 19,
-        title: "Urban Gospel Mix 2024",
-        thumbnail: "https://img.youtube.com/vi/09LXdeNP7Ek/hqdefault.jpg",
-        youtubeLink: "https://www.youtube.com/results?search_query=DJ+Werra+Urban+Gospel",
-        description: "Contemporary Christian Music"
-    },
-    {
-        id: 20,
-        title: "Best of Rose Muhando Special",
-        thumbnail: "https://img.youtube.com/vi/CkhkKACnouka/hqdefault.jpg", // Valid ID reused for valid thumbnail display
-        youtubeLink: "https://www.youtube.com/watch?v=CkhkKACnouka",
-        description: "Dedicated to the Queen of Gospel"
-    },
-    {
-        id: 21,
-        title: "Mungu Kwanza Edition",
-        thumbnail: "https://img.youtube.com/vi/onBdMwFHFLq/hqdefault.jpg", // Valid ID reused for valid thumbnail display
-        youtubeLink: "https://www.youtube.com/results?search_query=DJ+Werra+Mungu+Kwanza",
-        description: "Putting God First - Worship Mix"
     }
 ];
 
