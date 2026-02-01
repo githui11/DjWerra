@@ -3,11 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const assets = [
-    { type: "video", src: "/assets/socials.mp4", title: "Socials", position: "object-top" },
-    { type: "video", src: "/assets/chill-blue.mp4", title: "Chill Blue", position: "object-center" }, // Adjusted to center
-    { type: "video", src: "/assets/chill-white.mp4", title: "Chill White", position: "object-center" }, // Adjusted to center
-    { type: "video", src: "/assets/xtreme.mp4", title: "Xtreme", position: "object-top" },
-    { type: "video", src: "/assets/youtube-channel-art.mp4", title: "Channel Art", position: "object-top" },
+    { type: "video", src: "/assets/socials.mp4", title: "Socials", position: "object-top", poster: "/assets/4.jpeg" },
+    { type: "video", src: "/assets/chill-blue.mp4", title: "Chill Blue", position: "object-center", poster: "/assets/2.jpeg" },
+    { type: "video", src: "/assets/chill-white.mp4", title: "Chill White", position: "object-center", poster: "/assets/3.jpeg" },
+    { type: "video", src: "/assets/xtreme.mp4", title: "Xtreme", position: "object-top", poster: "/assets/1.jpeg" },
+    { type: "video", src: "/assets/youtube-channel-art.mp4", title: "Channel Art", position: "object-top", poster: "/assets/academy-bg.jpeg" },
 ];
 
 export const Gallery = () => {
@@ -32,13 +32,19 @@ export const Gallery = () => {
                         >
                             {asset.type === "video" ? (
                                 <video
-                                    src={asset.src}
                                     className={`w-full h-full object-cover ${asset.position} opacity-80 group-hover:opacity-100 transition-opacity duration-300`}
                                     muted
                                     loop
                                     playsInline
-                                    onMouseOver={(e) => e.currentTarget.play()}
+                                    preload="none"
+                                    poster={asset.poster}
+                                    onMouseOver={(e) => {
+                                        const video = e.currentTarget;
+                                        if (!video.src) video.src = asset.src;
+                                        video.play();
+                                    }}
                                     onMouseOut={(e) => e.currentTarget.pause()}
+                                    data-src={asset.src}
                                 />
                             ) : (
                                 <img

@@ -11,8 +11,7 @@ export default function AcademyPage() {
                 <img
                     src="/assets/academy-bg.jpeg"
                     alt="DJ Academy Background"
-                    className="w-full h-full object-cover opacity-60"
-                    style={{ objectPosition: 'center 30%' }}
+                    className="w-full h-full object-contain object-bottom opacity-80"
                 />
                 <div className="absolute inset-0 bg-black/50" />
             </div>
