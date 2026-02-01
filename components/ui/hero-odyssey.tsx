@@ -537,13 +537,13 @@ export const HeroSection: React.FC = () => {
                         Elevating the atmosphere with the best in Gospel mixes. Experience the sound of inspiration.
                     </motion.p>
 
-                    <motion.div variants={itemVariants} className="flex gap-4 mb-8">
-                        <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-all transform hover:scale-105">
+                    <motion.div variants={itemVariants} className="flex gap-4 mb-8 relative z-30">
+                        <Link href="/bookings" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-all transform hover:scale-105">
                             Book Now
-                        </button>
-                        <button className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white rounded-full font-medium transition-all">
+                        </Link>
+                        <Link href="/mixes" className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white rounded-full font-medium transition-all">
                             Listen to Mixes
-                        </button>
+                        </Link>
                     </motion.div>
 
                     {/* Social Media Links */}
