@@ -3,24 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const testimonials = [
-    {
-        quote: "DJ Werra brought an incredible energy to our church anniversary. The music selection was perfect and kept everyone engaged throughout the celebration.",
-        author: "Pastor James M.",
-        role: "Senior Pastor, Grace Chapel",
-    },
-    {
-        quote: "Professional, punctual, and knows exactly how to read the room. Our wedding reception was unforgettable thanks to DJ Werra's amazing set.",
-        author: "Sarah & David K.",
-        role: "Wedding Clients",
-    },
-    {
-        quote: "The best Gospel DJ in Nairobi. He transformed our corporate event into a spiritual celebration that everyone is still talking about.",
-        author: "Michael O.",
-        role: "Event Coordinator, Faith Events",
-    },
-];
-
 const bookingSteps = [
     {
         step: "01",
@@ -86,52 +68,6 @@ export const Gallery = () => {
                                     <p className="text-gray-400 text-sm">
                                         {item.description}
                                     </p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Testimonials Section */}
-            <section className="py-20 bg-black w-full">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        className="text-center mb-16"
-                    >
-                        <h2 className="text-3xl md:text-5xl font-light text-white mb-4">
-                            What Clients Say
-                        </h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto">
-                            Don't just take my word for it - hear from event organizers and clients who've experienced the vibe.
-                        </p>
-                    </motion.div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {testimonials.map((testimonial, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: index * 0.15 }}
-                                className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-white/5 relative"
-                            >
-                                {/* Quote mark */}
-                                <div className="absolute top-4 right-6 text-6xl text-blue-500/20 font-serif">
-                                    "
-                                </div>
-                                <p className="text-gray-300 mb-6 relative z-10 leading-relaxed">
-                                    "{testimonial.quote}"
-                                </p>
-                                <div className="border-t border-white/10 pt-4">
-                                    <div className="font-semibold text-white">
-                                        {testimonial.author}
-                                    </div>
-                                    <div className="text-sm text-blue-400">
-                                        {testimonial.role}
-                                    </div>
                                 </div>
                             </motion.div>
                         ))}
