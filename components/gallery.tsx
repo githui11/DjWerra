@@ -3,42 +3,21 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const services = [
+const testimonials = [
     {
-        title: "Church Events",
-        description: "Worship nights, anniversaries, conferences, and youth events",
-        icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-            </svg>
-        ),
+        quote: "DJ Werra brought an incredible energy to our church anniversary. The music selection was perfect and kept everyone engaged throughout the celebration.",
+        author: "Pastor James M.",
+        role: "Senior Pastor, Grace Chapel",
     },
     {
-        title: "Weddings",
-        description: "Ceremonies, receptions, and after-parties with the perfect soundtrack",
-        icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-            </svg>
-        ),
+        quote: "Professional, punctual, and knows exactly how to read the room. Our wedding reception was unforgettable thanks to DJ Werra's amazing set.",
+        author: "Sarah & David K.",
+        role: "Wedding Clients",
     },
     {
-        title: "Corporate Events",
-        description: "Team building, launches, and company celebrations",
-        icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-        ),
-    },
-    {
-        title: "Private Parties",
-        description: "Birthdays, graduations, and family celebrations",
-        icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-            </svg>
-        ),
+        quote: "The best Gospel DJ in Nairobi. He transformed our corporate event into a spiritual celebration that everyone is still talking about.",
+        author: "Michael O.",
+        role: "Event Coordinator, Faith Events",
     },
 ];
 

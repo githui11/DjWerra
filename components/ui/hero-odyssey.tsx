@@ -586,7 +586,7 @@ export const HeroSection: React.FC = () => {
                     playsInline
                     preload="metadata"
                     poster="/assets/2.jpeg"
-                    className="absolute inset-0 w-full h-full object-contain md:object-cover object-center md:object-top opacity-80"
+                    className="absolute inset-0 w-full h-auto min-h-full md:h-full object-contain md:object-cover object-top opacity-80"
                 >
                     <source src="/assets/chill-blue.mp4" type="video/mp4" />
                 </video>
