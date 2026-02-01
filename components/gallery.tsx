@@ -3,31 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const stats = [
-    { value: "200+", label: "Events Played" },
-    { value: "8+", label: "Years Experience" },
-    { value: "50+", label: "Church Partners" },
-    { value: "100%", label: "Client Satisfaction" },
-];
-
-const testimonials = [
-    {
-        quote: "DJ Werra brought an incredible energy to our church anniversary. The music selection was perfect and kept everyone engaged throughout the celebration.",
-        author: "Pastor James M.",
-        role: "Senior Pastor, Grace Chapel",
-    },
-    {
-        quote: "Professional, punctual, and knows exactly how to read the room. Our wedding reception was unforgettable thanks to DJ Werra's amazing set.",
-        author: "Sarah & David K.",
-        role: "Wedding Clients",
-    },
-    {
-        quote: "The best Gospel DJ in Nairobi. He transformed our corporate event into a spiritual celebration that everyone is still talking about.",
-        author: "Michael O.",
-        role: "Event Coordinator, Faith Events",
-    },
-];
-
 const services = [
     {
         title: "Church Events",
@@ -67,35 +42,34 @@ const services = [
     },
 ];
 
+const bookingSteps = [
+    {
+        step: "01",
+        title: "Get in Touch",
+        description: "Send me your event details - date, venue, and what you're looking for",
+    },
+    {
+        step: "02",
+        title: "Let's Talk",
+        description: "We'll discuss your vision, music preferences, and event flow",
+    },
+    {
+        step: "03",
+        title: "Confirm & Book",
+        description: "Secure your date with a deposit and let the countdown begin",
+    },
+    {
+        step: "04",
+        title: "Event Day",
+        description: "I arrive early, set up, and deliver an unforgettable experience",
+    },
+];
+
 export const Gallery = () => {
     return (
         <>
-            {/* Stats Section */}
-            <section className="py-16 bg-gradient-to-b from-black to-gray-900 w-full">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        {stats.map((stat, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.1 }}
-                                className="text-center"
-                            >
-                                <div className="text-4xl md:text-5xl font-bold text-blue-500 mb-2">
-                                    {stat.value}
-                                </div>
-                                <div className="text-gray-400 text-sm md:text-base">
-                                    {stat.label}
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* Services Section */}
-            <section className="py-20 bg-gray-900 w-full">
+            <section className="py-20 bg-gradient-to-b from-black to-gray-900 w-full">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -134,8 +108,8 @@ export const Gallery = () => {
                 </div>
             </section>
 
-            {/* Testimonials Section */}
-            <section className="py-20 bg-black w-full">
+            {/* How It Works Section */}
+            <section className="py-20 bg-gray-900 w-full">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -143,36 +117,36 @@ export const Gallery = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-5xl font-light text-white mb-4">
-                            What Clients Say
+                            How It Works
                         </h2>
                         <p className="text-gray-400 max-w-2xl mx-auto">
-                            Don't just take my word for it - hear from event organizers and clients who've experienced the vibe.
+                            Booking is simple. Here's how we make your event happen.
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {testimonials.map((testimonial, index) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {bookingSteps.map((item, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: index * 0.15 }}
-                                className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-white/5 relative"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.1 }}
+                                className="relative"
                             >
-                                {/* Quote mark */}
-                                <div className="absolute top-4 right-6 text-6xl text-blue-500/20 font-serif">
-                                    "
-                                </div>
-                                <p className="text-gray-300 mb-6 relative z-10 leading-relaxed">
-                                    "{testimonial.quote}"
-                                </p>
-                                <div className="border-t border-white/10 pt-4">
-                                    <div className="font-semibold text-white">
-                                        {testimonial.author}
+                                {/* Connector line */}
+                                {index < bookingSteps.length - 1 && (
+                                    <div className="hidden lg:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-blue-500/50 to-transparent" />
+                                )}
+                                <div className="text-center">
+                                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600/20 border border-blue-500/30 mb-4">
+                                        <span className="text-2xl font-bold text-blue-500">{item.step}</span>
                                     </div>
-                                    <div className="text-sm text-blue-400">
-                                        {testimonial.role}
-                                    </div>
+                                    <h3 className="text-xl font-semibold text-white mb-2">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-gray-400 text-sm">
+                                        {item.description}
+                                    </p>
                                 </div>
                             </motion.div>
                         ))}
@@ -181,7 +155,7 @@ export const Gallery = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-gradient-to-t from-black to-gray-900 w-full">
+            <section className="py-20 bg-black w-full">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
