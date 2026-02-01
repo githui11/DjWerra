@@ -4,7 +4,7 @@ import Link from "next/link";
 import { MoveLeft, ImageOff } from "lucide-react";
 
 // Comprehensive list of identified mixes
-// Local thumbs for verified downloads, Remote for verified IDs
+// Local thumbs for verified downloads, Proxy for verified IDs to bypass blocks
 const mixes = [
     // --- Latest & Featured (Verified Local) ---
     {
@@ -43,60 +43,60 @@ const mixes = [
         description: "Ft Solomon Mkubwa, Eunice Njeri"
     },
 
-    // --- Verified IDs (Remote Thumbnails) ---
+    // --- Verified IDs (Proxy Thumbnails) ---
     {
         id: 6,
         title: "BEST OF LIVE SWAHILI PRAISE | SET 2",
-        thumbnail: "https://img.youtube.com/vi/z5f1N1l111E/hqdefault.jpg", // Set 2 Verified ID
+        thumbnail: "/api/thumbnail?id=z5f1N1l111E", // Proxy
         youtubeLink: "https://www.youtube.com/watch?v=z5f1N1l111E",
         description: "Live Worship Session - Ft Bella Kombo, Dr. Sarah K"
     },
     {
         id: 7,
         title: "SWAHILI WORSHIP GOSPEL MIX | SHUSHA NYAVU",
-        thumbnail: "https://img.youtube.com/vi/ohOaG8mxOAc/hqdefault.jpg",
+        thumbnail: "/api/thumbnail?id=ohOaG8mxOAc",
         youtubeLink: "https://www.youtube.com/watch?v=ohOaG8mxOAc",
         description: "Ft Christina Shusho, Obby Alpha, Guardian Angel"
     },
     {
         id: 8,
         title: "7HM Sessions Ep 5 – LATEST GOSPEL MIX",
-        thumbnail: "https://img.youtube.com/vi/g_2B6-qZl7E/hqdefault.jpg",
+        thumbnail: "/api/thumbnail?id=g_2B6-qZl7E",
         youtubeLink: "https://www.youtube.com/watch?v=g_2B6-qZl7E",
         description: "Live in Nairobi CBD - Ft Nairobi Street Vibes"
     },
     {
         id: 9,
         title: "Praise Atmosphere S1 E1",
-        thumbnail: "https://img.youtube.com/vi/uekQikG1XDQ/hqdefault.jpg",
+        thumbnail: "/api/thumbnail?id=uekQikG1XDQ",
         youtubeLink: "https://www.youtube.com/watch?v=uekQikG1XDQ",
         description: "Best Swahili Gospel Mix - Ft Msanii Group"
     },
     {
         id: 10,
         title: "Praise Atmosphere S1 E2",
-        thumbnail: "https://img.youtube.com/vi/onBdMwFHFLq/hqdefault.jpg",
+        thumbnail: "/api/thumbnail?id=onBdMwFHFLq",
         youtubeLink: "https://www.youtube.com/watch?v=onBdMwFHFLq",
         description: "Amefanya Mungu - Ft Wapendwa Muziki"
     },
     {
         id: 11,
         title: "BEST SWAHILI GOSPEL MIX 2025 | Ep 3",
-        thumbnail: "https://img.youtube.com/vi/09LXdeNP7Ek/hqdefault.jpg",
+        thumbnail: "/api/thumbnail?id=09LXdeNP7Ek",
         youtubeLink: "https://www.youtube.com/watch?v=09LXdeNP7Ek",
         description: "Ft Sifaeli Mwabuka, Rose Muhando"
     },
     {
         id: 12,
         title: "BEST OF LIVE SWAHILI PRAISE | SET 1",
-        thumbnail: "https://img.youtube.com/vi/GxBo6ShMVZf/hqdefault.jpg",
+        thumbnail: "/api/thumbnail?id=GxBo6ShMVZf",
         youtubeLink: "https://www.youtube.com/watch?v=GxBo6ShMVZf",
         description: "Ft Israel Mbonyi, Dr. Ipyana"
     },
     {
         id: 13,
         title: "GOSPEL ANTHEM MIX 2024 | BLEND 4",
-        thumbnail: "https://img.youtube.com/vi/kF6_zED-x8P/hqdefault.jpg",
+        thumbnail: "/api/thumbnail?id=kF6_zED-x8P",
         youtubeLink: "https://www.youtube.com/watch?v=kF6_zED-x8P",
         description: "Urban Gospel Blend - Ft Various Artists"
     }

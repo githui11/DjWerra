@@ -586,13 +586,13 @@ export const HeroSection: React.FC = () => {
                     playsInline
                     preload="metadata"
                     poster="/assets/2.jpeg"
-                    className="absolute left-0 right-0 top-24 md:top-0 bottom-0 w-full h-auto min-h-full md:h-full object-contain md:object-cover object-top opacity-80"
+                    className="absolute left-0 right-0 top-24 md:top-0 bottom-0 w-full h-auto min-h-full md:h-full object-contain md:object-cover object-top opacity-95"
                 >
                     <source src="/assets/chill-blue.mp4" type="video/mp4" />
                 </video>
 
                 {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 bg-black/25"></div>
 
                 {/* Central light beam */}
                 <div className="absolute top-0 w-[100%] left-1/2 transform -translate-x-1/2 h-full opacity-60">
