@@ -4,21 +4,23 @@ import time
 
 # List of Video IDs and Titles (will be populated/expanded)
 videos = [
-    # Confirmed from previous steps
     {"id": "8JNcxlNjV2E", "title": "Top Swahili 2026"},
+    {"id": "1quNbPJ8DQw", "title": "7HM Ep 5"},
     {"id": "o7VtTIpf218", "title": "Kimya Edition"},
-    {"id": "wVfaWSukNlg", "title": "Live Praise 2026"},
+    {"id": "MI8JAmnmbSI", "title": "Live Praise 2026"},
+    {"id": "x8UwVXcjE0A", "title": "Ep 3"},
+    {"id": "iUBzKrWxW40", "title": "Praise S1 E2"},
+    {"id": "uekQikG1XF4", "title": "Praise S1 E1"},
+    {"id": "W0o9YPrAK7A", "title": "Set 3"},
+    {"id": "WrDzaY4-yAI", "title": "Set 2"},
     {"id": "DF5BvTmhMYQ", "title": "Reggae Vol 2"},
+    {"id": "8yyyFfP5wDs", "title": "East Africa Vol 3"},
+    {"id": "wVfaWSukNlg", "title": "Set 1"},
     {"id": "ev7U4Ycvj2w", "title": "Throwback"},
-    {"id": "z5f1N1l111E", "title": "Set 2"},
-    {"id": "ohOaG8mxOAc", "title": "Shusha Nyavu"},
-    {"id": "g_2B6-qZl7E", "title": "7HM Ep 5"},
-    {"id": "uekQikG1XDQ", "title": "Praise S1 E1"},
-    {"id": "onBdMwFHFLq", "title": "Praise S1 E2"},
-    {"id": "09LXdeNP7Ek", "title": "Ep 3"},
-    {"id": "GxBo6ShMVZf", "title": "Set 1"},
-    {"id": "kF6_zED-x8P", "title": "Blend 4"},
-    # Fallback/New IDs will be added here manually after scrape
+    {"id": "YZFqDp-6UvY", "title": "Wapendwa Muziki"},
+    {"id": "ohOaG8mxOGU", "title": "Shusha Nyavu"},
+    {"id": "qNAOrNogk2o", "title": "Blend 4"},
+    {"id": "L4MqHAW7GFA", "title": "Blend 3"},
 ]
 
 DEST_DIR = r"c:\Users\Admin\OneDrive\Desktop\Client Websites\dj-werra-website\public\assets\thumbnails"
