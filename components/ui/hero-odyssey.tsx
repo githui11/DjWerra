@@ -405,9 +405,6 @@ export const HeroSection: React.FC = () => {
                             <Link href="/mixes" className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">
                                 Mixes
                             </Link>
-                            <Link href="/events" className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">
-                                Events
-                            </Link>
                             <Link href="/academy" className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">
                                 Academy
                             </Link>
@@ -492,7 +489,6 @@ export const HeroSection: React.FC = () => {
                                 Home
                             </Link>
                             <Link href="/mixes" className="px-6 py-3 text-gray-300">Mixes</Link>
-                            <Link href="/events" className="px-6 py-3 text-gray-300">Events</Link>
                             <Link href="/academy" className="px-6 py-3 text-gray-300">Academy</Link>
                             <Link href="/contact" className="px-6 py-3 text-gray-300">Contact</Link>
                             <Link href="/bookings" className="px-6 py-3 bg-blue-600 rounded-full text-white">
@@ -586,7 +582,7 @@ export const HeroSection: React.FC = () => {
                     playsInline
                     preload="metadata"
                     poster="/assets/2.jpeg"
-                    className="absolute left-0 right-0 top-24 md:top-0 bottom-0 w-full h-auto min-h-full md:h-full object-contain md:object-cover object-top opacity-95"
+                    className="absolute left-0 right-0 top-24 md:top-16 bottom-0 w-full h-auto min-h-full md:h-full object-contain md:object-cover object-top opacity-95"
                 >
                     <source src="/assets/chill-blue.mp4" type="video/mp4" />
                 </video>
