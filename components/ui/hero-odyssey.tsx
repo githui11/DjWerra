@@ -491,7 +491,7 @@ export const HeroSection: React.FC = () => {
                             <Link href="/mixes" className="px-6 py-3 text-gray-300">Mixes</Link>
                             <Link href="/academy" className="px-6 py-3 text-gray-300">Academy</Link>
                             <Link href="/contact" className="px-6 py-3 text-gray-300">Contact</Link>
-                            <Link href="/bookings" className="px-6 py-3 bg-blue-600 rounded-full text-white">
+                            <Link href="/contact" className="px-6 py-3 bg-blue-600 rounded-full text-white">
                                 Book Now
                             </Link>
                         </div>
@@ -534,7 +534,7 @@ export const HeroSection: React.FC = () => {
                     </motion.p>
 
                     <motion.div variants={itemVariants} className="flex gap-4 mb-8 relative z-30">
-                        <Link href="/bookings" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-all transform hover:scale-105">
+                        <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-all transform hover:scale-105">
                             Book Now
                         </Link>
                         <Link href="/mixes" className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white rounded-full font-medium transition-all">
