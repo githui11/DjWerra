@@ -31,9 +31,11 @@ export default function AcademyPage() {
                         From beatmatching to crowd control, elevate your skills to the next level.
                     </p>
 
-                    <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-blue-900/50">
-                        Enroll Now
-                    </button>
+                    <Link href="/contact">
+                        <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-blue-900/50">
+                            Enroll Now
+                        </button>
+                    </Link>
 
                     <p className="mt-6 text-sm text-gray-400">
                         * Limited slots available for the upcoming intake.
