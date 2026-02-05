@@ -417,7 +417,7 @@ export const HeroSection: React.FC = () => {
                         <Link href="/promoters" className="hidden md:block px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">
                             For Promoters
                         </Link>
-                        <Link href="/bookings" className="px-4 py-2 bg-blue-600/90 backdrop-blur-sm rounded-full text-sm hover:bg-blue-700 transition-colors text-white font-medium">
+                        <Link href="/contact" className="px-4 py-2 bg-blue-600/90 backdrop-blur-sm rounded-full text-sm hover:bg-blue-700 transition-colors text-white font-medium">
                             Book Now
                         </Link>
                         {/* Mobile menu button */}
