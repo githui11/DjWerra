@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ElasticHueSliderProps {
     value: number;
@@ -390,20 +391,23 @@ export const HeroSection: React.FC = () => {
                 >
                     <div className="flex items-center">
                         <div className="text-2xl font-bold">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                <path
-                                    d="M20 5L5 20L20 35L35 20L20 5Z"
-                                    stroke="white"
-                                    strokeWidth="2"
-                                />
-                            </svg>
+                            <Image
+                                src="/assets/logo.png"
+                                alt="DJ Werra Logo"
+                                width={40}
+                                height={40}
+                                className="object-contain"
+                            />
                         </div>
                         <div className="hidden md:flex items-center space-x-6 ml-8">
                             <Link href="/" className="px-4 py-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-full text-sm transition-colors text-white">
                                 Home
                             </Link>
-                            <Link href="/mixes" className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">
-                                Mixes
+                            <Link href="/videos" className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">
+                                Videos
+                            </Link>
+                            <Link href="/audio" className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">
+                                Audio
                             </Link>
                             <Link href="/academy" className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">
                                 Academy
@@ -488,7 +492,8 @@ export const HeroSection: React.FC = () => {
                             <Link href="/" className="px-6 py-3 bg-gray-800/50 rounded-full text-white">
                                 Home
                             </Link>
-                            <Link href="/mixes" className="px-6 py-3 text-gray-300">Mixes</Link>
+                            <Link href="/videos" className="px-6 py-3 text-gray-300">Videos</Link>
+                            <Link href="/audio" className="px-6 py-3 text-gray-300">Audio</Link>
                             <Link href="/academy" className="px-6 py-3 text-gray-300">Academy</Link>
                             <Link href="/contact" className="px-6 py-3 text-gray-300">Contact</Link>
                             <Link href="/contact" className="px-6 py-3 bg-blue-600 rounded-full text-white">
@@ -537,8 +542,8 @@ export const HeroSection: React.FC = () => {
                         <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-all transform hover:scale-105">
                             Book Now
                         </Link>
-                        <Link href="/mixes" className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white rounded-full font-medium transition-all">
-                            Listen to Mixes
+                        <Link href="/videos" className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white rounded-full font-medium transition-all">
+                            Watch Videos
                         </Link>
                     </motion.div>
 
