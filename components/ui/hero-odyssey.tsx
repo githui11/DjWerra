@@ -392,7 +392,7 @@ export const HeroSection: React.FC = () => {
                     <div className="flex items-center">
                         <div className="text-2xl font-bold">
                             <Image
-                                src="/assets/logo.png"
+                                src="/assets/logo.jpeg"
                                 alt="DJ Werra Logo"
                                 width={40}
                                 height={40}
