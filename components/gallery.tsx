@@ -93,7 +93,7 @@ export const Gallery = () => {
                             Let&apos;s make your event unforgettable
                         </h2>
                         <p className="mx-auto mb-9 max-w-xl text-base leading-relaxed text-gray-400 md:text-lg">
-                            Weddings, conferences, church gatherings — secure the date and I&apos;ll handle the atmosphere.
+                            Weddings, conferences, church gatherings. Secure the date and I&apos;ll handle the atmosphere.
                         </p>
 
                         <div className="flex flex-col items-center gap-6">
