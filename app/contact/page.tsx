@@ -52,10 +52,7 @@ export default function ContactPage() {
                                         <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 group-hover:border-blue-500/40 group-hover:bg-blue-600/10 transition-all">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
                                         </span>
-                                        <div>
-                                            <p className="text-sm font-medium leading-none">Instagram</p>
-                                            <p className="text-xs text-gray-500 mt-0.5">@dj.werra254</p>
-                                        </div>
+                                        <p className="text-sm font-medium">Instagram</p>
                                     </a>
 
                                     <a
@@ -67,10 +64,7 @@ export default function ContactPage() {
                                         <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 group-hover:border-blue-500/40 group-hover:bg-blue-600/10 transition-all">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" /></svg>
                                         </span>
-                                        <div>
-                                            <p className="text-sm font-medium leading-none">TikTok</p>
-                                            <p className="text-xs text-gray-500 mt-0.5">@dj_werra254</p>
-                                        </div>
+                                        <p className="text-sm font-medium">TikTok</p>
                                     </a>
                                 </div>
                             </div>
