@@ -54,7 +54,7 @@ export function Footer() {
 
                     <div>
                         <h4 className="text-white font-semibold mb-4">Connect</h4>
-                        <div className="flex gap-4">
+                        <div className="flex flex-wrap gap-3">
                             {socialLinks.map((link) => (
                                 <a
                                     key={link.name}
