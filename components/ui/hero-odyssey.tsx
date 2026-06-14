@@ -381,13 +381,13 @@ export const HeroSection: React.FC = () => {
     return (
         <div className="relative w-full bg-black text-white overflow-hidden">
             {/* Main container with space for content */}
-            <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:h-screen">
+            <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 h-screen">
                 {/* Navigation */}
                 <motion.div
                     initial={{ y: -20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="px-4 backdrop-blur-3xl bg-black/50 rounded-full py-4 flex justify-between items-center mb-6 border border-white/10"
+                    className="px-4 backdrop-blur-3xl bg-black/50 rounded-full py-4 flex justify-between items-center mb-12 border border-white/10"
                 >
                     <div className="flex items-center">
                         <div className="text-2xl font-bold">
@@ -509,8 +509,14 @@ export const HeroSection: React.FC = () => {
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
-                    className="relative z-30 flex-1 flex flex-col items-center justify-center text-center max-w-4xl mx-auto pb-16 md:pb-0"
+                    className="relative z-30 flex flex-col items-center text-center max-w-4xl mx-auto pt-20"
                 >
+                    <ElasticHueSlider
+                        value={lightningHue}
+                        onChange={setLightningHue}
+                        label="Vibe Check"
+                    />
+
                     <motion.h1
                         variants={itemVariants}
                         className="text-5xl md:text-8xl font-bold mb-4 tracking-tighter"
