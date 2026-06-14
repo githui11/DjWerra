@@ -30,7 +30,7 @@ export const Gallery = () => {
     return (
         <>
             {/* How It Works Section */}
-            <section className="w-full bg-black pt-8 pb-16 px-6">
+            <section className="w-full bg-black pt-8 pb-4 md:pb-16 px-6">
                 <div className="max-w-6xl mx-auto">
 
                     {/* Header row */}
@@ -96,7 +96,7 @@ export const Gallery = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.08 }}
-                                className="flex gap-6 pb-8 border-l border-white/8 pl-6 relative"
+                                className="flex gap-6 pb-6 last:pb-0 border-l border-white/8 pl-6 relative"
                             >
                                 <div className="absolute -left-[4.5px] top-1.5 h-2 w-2 rounded-full bg-blue-500/70 ring-4 ring-blue-500/10" />
                                 <div className="flex-1">
@@ -112,7 +112,7 @@ export const Gallery = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="relative w-full overflow-hidden bg-black pt-8 pb-12">
+            <section className="relative w-full overflow-hidden bg-black pt-4 md:pt-8 pb-12">
                 {/* soft radial glow */}
                 <div className="pointer-events-none absolute left-1/2 top-4 h-64 w-64 -translate-x-1/2 rounded-full bg-blue-600/20 blur-[120px]" />
 
@@ -145,7 +145,7 @@ export const Gallery = () => {
                                 </Link>
                                 <a
                                     href="tel:0757127598"
-                                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-8 py-4 font-medium text-white backdrop-blur-sm transition-all hover:border-white/30 hover:bg-white/10"
+                                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-transparent px-8 py-4 font-medium text-white transition-all hover:border-white/60 hover:bg-white/5"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
                                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />

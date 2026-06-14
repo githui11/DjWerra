@@ -381,7 +381,7 @@ export const HeroSection: React.FC = () => {
     return (
         <div className="relative w-full bg-black text-white overflow-hidden">
             {/* Main container with space for content */}
-            <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 h-screen">
+            <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-16 md:pb-6 md:h-screen">
                 {/* Navigation */}
                 <motion.div
                     initial={{ y: -20, opacity: 0 }}
