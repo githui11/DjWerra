@@ -35,8 +35,8 @@ export function Footer() {
     return (
         <footer className="bg-black/95 text-gray-400 py-12 border-t border-white/10 relative z-50">
             <div className="max-w-7xl mx-auto px-4 md:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                    <div>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+                    <div className="col-span-2 md:col-span-1">
                         <h3 className="text-white font-bold text-xl mb-4 tracking-tighter">DJ WERRA</h3>
                         <p className="text-sm mb-4">Nairobi's Premium Gospel DJ. Elevating the atmosphere.</p>
                         <p className="text-sm">&copy; {new Date().getFullYear()} All rights reserved.</p>
