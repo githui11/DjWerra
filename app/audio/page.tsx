@@ -108,7 +108,7 @@ export default function AudioPage() {
     }
 
     return (
-        <div className="min-h-screen bg-black text-white p-8 pt-24">
+        <div className="min-h-screen bg-black text-white p-8">
             <div className="max-w-7xl mx-auto">
                 <Link href="/" className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors">
                     <MoveLeft className="mr-2 h-4 w-4" />
