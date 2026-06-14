@@ -30,44 +30,37 @@ export const Gallery = () => {
     return (
         <>
             {/* How It Works Section */}
-            <section className="py-20 bg-gray-900 w-full">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section className="w-full bg-black py-20 px-6">
+                <div className="max-w-2xl mx-auto">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="text-center mb-16"
+                        viewport={{ once: true }}
+                        className="mb-12"
                     >
-                        <h2 className="text-3xl md:text-5xl font-light text-white mb-4">
-                            How It Works
+                        <span className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-400">Booking</span>
+                        <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                            How it works
                         </h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto">
-                            Booking is simple. Here's how we make your event happen.
-                        </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="space-y-0">
                         {bookingSteps.map((item, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 12 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.1 }}
-                                className="relative"
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.08 }}
+                                className="flex gap-6 pb-10 border-l border-white/8 pl-6 relative"
                             >
-                                {/* Connector line */}
-                                {index < bookingSteps.length - 1 && (
-                                    <div className="hidden lg:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-blue-500/50 to-transparent" />
-                                )}
-                                <div className="text-center">
-                                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600/20 border border-blue-500/30 mb-4">
-                                        <span className="text-2xl font-bold text-blue-500">{item.step}</span>
-                                    </div>
-                                    <h3 className="text-xl font-semibold text-white mb-2">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-gray-400 text-sm">
-                                        {item.description}
-                                    </p>
+                                {/* dot on the line */}
+                                <div className="absolute -left-[4.5px] top-1 h-2 w-2 rounded-full bg-blue-500/60" />
+
+                                <div className="flex-1">
+                                    <span className="text-xs font-mono text-gray-600">{item.step}</span>
+                                    <h3 className="mt-1 text-base font-semibold text-white">{item.title}</h3>
+                                    <p className="mt-1 text-sm leading-relaxed text-gray-500">{item.description}</p>
                                 </div>
                             </motion.div>
                         ))}
