@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { MoveLeft } from "lucide-react";
+import { PageHeader } from "@/components/page-header";
 
 export default function AcademyPage() {
     return (
         <div className="min-h-screen relative bg-black text-white overflow-hidden">
+            <PageHeader />
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -17,11 +18,6 @@ export default function AcademyPage() {
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 pt-6 pb-24 md:py-24 flex flex-col md:h-screen md:justify-center">
-                <Link href="/" className="inline-flex items-center text-gray-300 hover:text-white mb-8 transition-colors self-start">
-                    <MoveLeft className="mr-2 h-4 w-4" />
-                    Back to Home
-                </Link>
-
                 <div className="max-w-2xl">
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter">
                         MASTER THE <span className="text-blue-500">CRAFT</span>

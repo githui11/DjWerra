@@ -1,17 +1,13 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { MoveLeft } from "lucide-react";
+import { PageHeader } from "@/components/page-header";
 
 export default function ContactPage() {
     return (
-        <div className="min-h-screen bg-black text-white pt-3 px-6 pb-8">
-            <div className="max-w-4xl mx-auto">
-                <Link href="/" className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors">
-                    <MoveLeft className="mr-2 h-4 w-4" />
-                    Back to Home
-                </Link>
-
+        <div className="min-h-screen bg-black text-white pb-8">
+            <PageHeader />
+            <div className="max-w-4xl mx-auto px-6 pt-8">
                 <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">Contact</h1>
                 <p className="text-gray-500 mb-10 max-w-2xl">
                     Ready to book or have questions? Reach out directly.
