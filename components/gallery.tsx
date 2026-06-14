@@ -99,7 +99,7 @@ export const Gallery = () => {
                         <div className="flex flex-col items-center gap-6">
                             <div className="flex w-full flex-col justify-center gap-3 sm:flex-row">
                                 <Link
-                                    href="/bookings"
+                                    href="/contact"
                                     className="group inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-8 py-4 font-medium text-white shadow-lg shadow-blue-600/25 transition-all hover:bg-blue-500 hover:shadow-blue-500/40"
                                 >
                                     Book Now
