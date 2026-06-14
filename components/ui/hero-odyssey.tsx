@@ -538,11 +538,11 @@ export const HeroSection: React.FC = () => {
                         Elevating the atmosphere with the best in Gospel mixes. Experience the sound of inspiration.
                     </motion.p>
 
-                    <motion.div variants={itemVariants} className="flex gap-4 mb-8 relative z-30">
-                        <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-all transform hover:scale-105">
+                    <motion.div variants={itemVariants} className="flex gap-3 mb-8 relative z-30">
+                        <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-medium shadow-lg shadow-blue-600/25 transition-all hover:shadow-blue-500/40">
                             Book Now
                         </Link>
-                        <Link href="/videos" className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white rounded-full font-medium transition-all">
+                        <Link href="/videos" className="px-8 py-3 bg-white/5 backdrop-blur-sm border border-white/15 hover:border-white/30 hover:bg-white/10 text-white rounded-full font-medium transition-all">
                             Watch Videos
                         </Link>
                     </motion.div>

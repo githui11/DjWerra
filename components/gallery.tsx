@@ -76,54 +76,64 @@ export const Gallery = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-gradient-to-t from-black to-gray-900 w-full">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <section className="relative w-full overflow-hidden bg-gradient-to-t from-black to-gray-900 pt-20 pb-12">
+                {/* soft radial glow */}
+                <div className="pointer-events-none absolute left-1/2 top-4 h-64 w-64 -translate-x-1/2 rounded-full bg-blue-600/20 blur-[120px]" />
+
+                <div className="relative mx-auto max-w-3xl px-6 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-light text-white mb-6">
-                            Ready to Elevate Your Event?
+                        <span className="mb-5 inline-block text-xs font-semibold uppercase tracking-[0.22em] text-blue-400">
+                            Bookings Open
+                        </span>
+                        <h2 className="mb-5 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+                            Let&apos;s make your event unforgettable
                         </h2>
-                        <p className="text-gray-400 mb-10 max-w-2xl mx-auto text-lg">
-                            Let's create an unforgettable experience together. Book now and secure your date.
+                        <p className="mx-auto mb-9 max-w-xl text-base leading-relaxed text-gray-400 md:text-lg">
+                            Weddings, conferences, church gatherings — secure the date and I&apos;ll handle the atmosphere.
                         </p>
 
-                        <div className="flex flex-col gap-6 items-center">
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
+                        <div className="flex flex-col items-center gap-6">
+                            <div className="flex w-full flex-col justify-center gap-3 sm:flex-row">
                                 <Link
                                     href="/bookings"
-                                    className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-all transform hover:scale-105 text-lg min-w-[200px]"
+                                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-8 py-4 font-medium text-white shadow-lg shadow-blue-600/25 transition-all hover:bg-blue-500 hover:shadow-blue-500/40"
                                 >
                                     Book Now
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                    </svg>
                                 </Link>
                                 <a
                                     href="tel:0757127598"
-                                    className="px-8 py-4 bg-white text-black hover:bg-gray-200 rounded-full font-medium transition-all transform hover:scale-105 text-lg min-w-[200px] flex items-center justify-center gap-2"
+                                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-8 py-4 font-medium text-white backdrop-blur-sm transition-all hover:border-white/30 hover:bg-white/10"
                                 >
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
                                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                     </svg>
                                     0757 127598
                                 </a>
                             </div>
 
-                            <div className="flex items-center gap-4 text-gray-400 text-sm mt-4">
-                                <span>Or DM me on:</span>
+                            <div className="flex items-center gap-3 text-sm text-gray-500">
+                                <span>Or DM</span>
                                 <a
                                     href="https://instagram.com/dj.werra254"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-white hover:text-blue-400 font-medium transition-colors"
+                                    className="font-medium text-gray-300 transition-colors hover:text-blue-400"
                                 >
                                     Instagram
                                 </a>
-                                <span className="text-gray-600">•</span>
+                                <span className="text-gray-700">•</span>
                                 <a
                                     href="https://tiktok.com/@dj_werra254"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-white hover:text-blue-400 font-medium transition-colors"
+                                    className="font-medium text-gray-300 transition-colors hover:text-blue-400"
                                 >
                                     TikTok
                                 </a>
