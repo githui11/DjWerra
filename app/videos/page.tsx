@@ -186,7 +186,7 @@ export default function VideosPage() {
     }
 
     return (
-        <div className="min-h-screen bg-black text-white p-8">
+        <div className="min-h-screen bg-black text-white pt-3 px-6 pb-8">
             <div className="max-w-7xl mx-auto">
                 <Link href="/" className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors">
                     <MoveLeft className="mr-2 h-4 w-4" />
