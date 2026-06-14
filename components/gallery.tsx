@@ -154,24 +154,25 @@ export const Gallery = () => {
                                 </a>
                             </div>
 
-                            <div className="flex items-center gap-3 text-sm text-gray-500">
-                                <span>Or DM</span>
+                            <div className="flex items-center gap-3">
+                                <span className="text-xs text-gray-600 uppercase tracking-widest">or DM</span>
                                 <a
                                     href="https://instagram.com/dj.werra254"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="font-medium text-gray-300 transition-colors hover:text-blue-400"
+                                    aria-label="Instagram"
+                                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all hover:border-white/25 hover:text-white"
                                 >
-                                    Instagram
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                                 </a>
-                                <span className="text-gray-700">•</span>
                                 <a
                                     href="https://tiktok.com/@dj_werra254"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="font-medium text-gray-300 transition-colors hover:text-blue-400"
+                                    aria-label="TikTok"
+                                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all hover:border-white/25 hover:text-white"
                                 >
-                                    TikTok
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
                                 </a>
                             </div>
                         </div>
