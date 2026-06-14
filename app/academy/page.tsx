@@ -16,7 +16,7 @@ export default function AcademyPage() {
                 <div className="absolute inset-0 bg-black/50" />
             </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 pt-8 pb-24 md:py-24 h-screen flex flex-col justify-center">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 pt-6 pb-24 md:py-24 flex flex-col md:h-screen md:justify-center">
                 <Link href="/" className="inline-flex items-center text-gray-300 hover:text-white mb-8 transition-colors self-start">
                     <MoveLeft className="mr-2 h-4 w-4" />
                     Back to Home
