@@ -496,6 +496,7 @@ export const HeroSection: React.FC = () => {
                             <Link href="/audio" className="px-6 py-3 text-gray-300">Audio</Link>
                             <Link href="/academy" className="px-6 py-3 text-gray-300">Academy</Link>
                             <Link href="/contact" className="px-6 py-3 text-gray-300">Contact</Link>
+                            <Link href="/promoters" className="px-6 py-3 text-gray-300">For Promoters</Link>
                             <Link href="/contact" className="px-6 py-3 bg-blue-600 rounded-full text-white">
                                 Book Now
                             </Link>
