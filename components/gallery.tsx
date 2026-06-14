@@ -30,13 +30,13 @@ export const Gallery = () => {
     return (
         <>
             {/* How It Works Section */}
-            <section className="w-full bg-black py-20 px-6">
+            <section className="w-full bg-black pt-8 pb-16 px-6">
                 <div className="max-w-2xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="mb-12"
+                        className="mb-8"
                     >
                         <span className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-400">Booking</span>
                         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white md:text-4xl">
@@ -69,7 +69,7 @@ export const Gallery = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="relative w-full overflow-hidden bg-gradient-to-t from-black to-gray-900 pt-20 pb-12">
+            <section className="relative w-full overflow-hidden bg-black pt-8 pb-12">
                 {/* soft radial glow */}
                 <div className="pointer-events-none absolute left-1/2 top-4 h-64 w-64 -translate-x-1/2 rounded-full bg-blue-600/20 blur-[120px]" />
 
