@@ -32,55 +32,82 @@ export const Gallery = () => {
             {/* How It Works Section */}
             <section className="w-full bg-black pt-8 pb-16 px-6">
                 <div className="max-w-6xl mx-auto">
-                    <div className="flex flex-col md:flex-row md:gap-24">
 
-                        {/* Left: heading block — sticky on desktop */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 16 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="mb-10 md:mb-0 md:w-72 md:shrink-0 md:pt-1"
-                        >
+                    {/* Header row */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-14"
+                    >
+                        <div>
                             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-400">Booking</span>
                             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white md:text-4xl">
                                 How it works
                             </h2>
-                            <p className="mt-4 text-sm leading-relaxed text-gray-500 max-w-xs">
-                                Four steps from first message to a packed dancefloor.
-                            </p>
-                            <Link
-                                href="/contact"
-                                className="mt-8 hidden md:inline-flex items-center gap-2 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"
-                            >
-                                Get started
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                </svg>
-                            </Link>
-                        </motion.div>
-
-                        {/* Right: timeline */}
-                        <div className="flex-1 space-y-0">
-                            {bookingSteps.map((item, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, y: 12 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: index * 0.08 }}
-                                    className="flex gap-6 pb-8 border-l border-white/8 pl-6 relative"
-                                >
-                                    <div className="absolute -left-[4.5px] top-1.5 h-2 w-2 rounded-full bg-blue-500/70 ring-4 ring-blue-500/10" />
-                                    <div className="flex-1">
-                                        <span className="text-xs font-mono text-gray-600">{item.step}</span>
-                                        <h3 className="mt-1 text-base font-semibold text-white">{item.title}</h3>
-                                        <p className="mt-1 text-sm leading-relaxed text-gray-500">{item.description}</p>
-                                    </div>
-                                </motion.div>
-                            ))}
                         </div>
+                        <Link
+                            href="/contact"
+                            className="mt-6 sm:mt-0 inline-flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                        >
+                            Book now
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                        </Link>
+                    </motion.div>
 
+                    {/* Desktop: horizontal 4-column grid */}
+                    <div className="hidden md:grid md:grid-cols-4 relative">
+
+                        {/* Connector line */}
+                        <div className="absolute top-5 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+                        {bookingSteps.map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.12, duration: 0.5, ease: "easeOut" }}
+                                className="pr-8 relative"
+                            >
+                                {/* Dot on connector line */}
+                                <div className="w-2.5 h-2.5 rounded-full bg-blue-500 ring-4 ring-blue-500/15 mb-8 relative z-10" />
+
+                                {/* Oversized muted step number — fills the column visually */}
+                                <div className="relative mb-4">
+                                    <span className="absolute -top-2 -left-1 text-8xl font-bold text-white/[0.04] select-none leading-none">
+                                        {item.step}
+                                    </span>
+                                    <h3 className="relative text-base font-semibold text-white">{item.title}</h3>
+                                </div>
+                                <p className="text-sm leading-relaxed text-gray-500">{item.description}</p>
+                            </motion.div>
+                        ))}
                     </div>
+
+                    {/* Mobile: vertical timeline */}
+                    <div className="md:hidden space-y-0">
+                        {bookingSteps.map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 12 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.08 }}
+                                className="flex gap-6 pb-8 border-l border-white/8 pl-6 relative"
+                            >
+                                <div className="absolute -left-[4.5px] top-1.5 h-2 w-2 rounded-full bg-blue-500/70 ring-4 ring-blue-500/10" />
+                                <div className="flex-1">
+                                    <span className="text-xs font-mono text-gray-600">{item.step}</span>
+                                    <h3 className="mt-1 text-base font-semibold text-white">{item.title}</h3>
+                                    <p className="mt-1 text-sm leading-relaxed text-gray-500">{item.description}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+
                 </div>
             </section>
 
